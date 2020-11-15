@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=FSMC_A4 Pin=U1-1
+Added Pin To Net: NetName=FSMC_A2 Pin=U1-3
+Added Pin To Net: NetName=FSMC_A1 Pin=U1-4
+Added Room: Name=1-stm32
+Added Room: Name=2-MIN-SYSTEM
