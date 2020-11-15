@@ -1,0 +1,5 @@
+Added Component: Designator=U0(STM-LQFP144_M)
+Add component. Clean all parameters for all variants
+Change Class Name : Old Net Name=Sheet1 New Net Name=1-stm32
+Added Member To Class: ClassName=1-stm32 Member=Component U0 stm32F407ZET6
+Added Room: Name=1-stm32
