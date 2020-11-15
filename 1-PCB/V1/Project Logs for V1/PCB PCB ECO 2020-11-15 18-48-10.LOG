@@ -1,0 +1,5 @@
+Added Component: Designator=U1(TSOP44_M)
+Add component. Clean all parameters for all variants
+Added Class: Name=2-MIN-SYSTEM
+Added Room: Name=1-stm32
+Added Room: Name=2-MIN-SYSTEM

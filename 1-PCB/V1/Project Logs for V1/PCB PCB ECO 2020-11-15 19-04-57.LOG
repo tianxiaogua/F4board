@@ -1,0 +1,109 @@
+Removed Member From Class: ClassName=2-MIN-SYSTEM Member=U1
+Added Component: Designator=C0(CC1608-0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Added Component: Designator=C1(CC1608-0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Added Component: Designator=U0(TSOP44_M)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=FSMC_A0 Pin=U0-5
+Added Net: Name=FSMC_A0
+Added Pin To Net: NetName=FSMC_A7 Pin=U0-22
+Added Net: Name=FSMC_A7
+Added Pin To Net: NetName=FSMC_A8 Pin=U0-21
+Added Net: Name=FSMC_A8
+Added Pin To Net: NetName=FSMC_A9 Pin=U0-20
+Added Net: Name=FSMC_A9
+Added Pin To Net: NetName=FSMC_A11 Pin=U0-18
+Added Net: Name=FSMC_A11
+Added Pin To Net: NetName=FSMC_A12 Pin=U0-28
+Added Net: Name=FSMC_A12
+Added Pin To Net: NetName=FSMC_A13 Pin=U0-27
+Added Net: Name=FSMC_A13
+Added Pin To Net: NetName=FSMC_A14 Pin=U0-26
+Added Net: Name=FSMC_A14
+Added Pin To Net: NetName=FSMC_A17 Pin=U0-43
+Added Net: Name=FSMC_A17
+Added Pin To Net: NetName=FSMC_D0 Pin=U0-7
+Added Net: Name=FSMC_D0
+Added Pin To Net: NetName=FSMC_D1 Pin=U0-8
+Added Net: Name=FSMC_D1
+Added Pin To Net: NetName=FSMC_D2 Pin=U0-9
+Added Net: Name=FSMC_D2
+Added Pin To Net: NetName=FSMC_D3 Pin=U0-10
+Added Net: Name=FSMC_D3
+Added Pin To Net: NetName=FSMC_D4 Pin=U0-13
+Added Net: Name=FSMC_D4
+Added Pin To Net: NetName=FSMC_D5 Pin=U0-14
+Added Net: Name=FSMC_D5
+Added Pin To Net: NetName=FSMC_D6 Pin=U0-15
+Added Net: Name=FSMC_D6
+Added Pin To Net: NetName=FSMC_D7 Pin=U0-16
+Added Net: Name=FSMC_D7
+Added Pin To Net: NetName=FSMC_D8 Pin=U0-29
+Added Net: Name=FSMC_D8
+Added Pin To Net: NetName=FSMC_D9 Pin=U0-30
+Added Net: Name=FSMC_D9
+Added Pin To Net: NetName=FSMC_D10 Pin=U0-31
+Added Net: Name=FSMC_D10
+Added Pin To Net: NetName=FSMC_D11 Pin=U0-32
+Added Net: Name=FSMC_D11
+Added Pin To Net: NetName=FSMC_D12 Pin=U0-35
+Added Net: Name=FSMC_D12
+Added Pin To Net: NetName=FSMC_D13 Pin=U0-36
+Added Net: Name=FSMC_D13
+Added Pin To Net: NetName=FSMC_D14 Pin=U0-37
+Added Net: Name=FSMC_D14
+Added Pin To Net: NetName=FSMC_D15 Pin=U0-38
+Added Net: Name=FSMC_D15
+Added Pin To Net: NetName=FSMC_NBL0 Pin=U0-39
+Added Net: Name=FSMC_NBL0
+Added Pin To Net: NetName=FSMC_NBL1 Pin=U0-40
+Added Net: Name=FSMC_NBL1
+Added Pin To Net: NetName=FSMC_NE3 Pin=U0-6
+Added Net: Name=FSMC_NE3
+Added Pin To Net: NetName=FSMC_NOE Pin=U0-41
+Added Net: Name=FSMC_NOE
+Added Pin To Net: NetName=FSMC_NWE Pin=U0-17
+Added Net: Name=FSMC_NWE
+Added Pin To Net: NetName=GND Pin=C0-1
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=U0-12
+Added Pin To Net: NetName=GND Pin=U0-16
+Added Pin To Net: NetName=GND Pin=U0-31
+Added Pin To Net: NetName=GND Pin=U0-34
+Added Pin To Net: NetName=GND Pin=U0-38
+Added Pin To Net: NetName=GND Pin=U0-61
+Added Pin To Net: NetName=GND Pin=U0-83
+Added Pin To Net: NetName=GND Pin=U0-94
+Added Pin To Net: NetName=GND Pin=U0-107
+Added Pin To Net: NetName=GND Pin=U0-120
+Added Pin To Net: NetName=GND Pin=U0-130
+Added Net: Name=GND
+Added Pin To Net: NetName=VCC Pin=C0-2
+Added Pin To Net: NetName=VCC Pin=C1-2
+Added Pin To Net: NetName=VCC Pin=U0-11
+Added Pin To Net: NetName=VCC Pin=U0-17
+Added Pin To Net: NetName=VCC Pin=U0-30
+Added Pin To Net: NetName=VCC Pin=U0-32
+Added Pin To Net: NetName=VCC Pin=U0-33
+Added Pin To Net: NetName=VCC Pin=U0-39
+Added Pin To Net: NetName=VCC Pin=U0-62
+Added Pin To Net: NetName=VCC Pin=U0-72
+Added Pin To Net: NetName=VCC Pin=U0-84
+Added Pin To Net: NetName=VCC Pin=U0-95
+Added Pin To Net: NetName=VCC Pin=U0-108
+Added Pin To Net: NetName=VCC Pin=U0-121
+Added Pin To Net: NetName=VCC Pin=U0-131
+Added Pin To Net: NetName=VCC Pin=U0-144
+Added Net: Name=VCC
+Added Member To Class: ClassName=2-MIN-SYSTEM Member=Component C0 100NF
+Added Member To Class: ClassName=2-MIN-SYSTEM Member=Component C1 100NF
+Added Member To Class: ClassName=2-MIN-SYSTEM Member=Component U0 IS62WV51216
+Added Room: Name=1-stm32
+Added Room: Name=2-MIN-SYSTEM

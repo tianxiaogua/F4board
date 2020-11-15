@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=1-stm32 Member=U1
+Added Pin To Net: NetName=FSMC_A3 Pin=U1-2
+Added Member To Class: ClassName=1-stm32 Member=Component U0 stm32F407ZET6
+Added Room: Name=1-stm32
+Added Room: Name=2-MIN-SYSTEM

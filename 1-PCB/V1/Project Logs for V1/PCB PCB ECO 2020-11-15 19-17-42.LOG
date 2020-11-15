@@ -1,0 +1,56 @@
+Removed Member From Class: ClassName=2-MIN-SYSTEM Member=U0
+Change Component Footprint: Designator=U0 Old Footprint=STM-LQFP144_M New Footprint=STM-LQFP144
+Change Component Designator: OldDesignator=U0 NewDesignator=U1
+Added Pin To Net: NetName=FSMC_A0 Pin=U0-10
+Added Pin To Net: NetName=FSMC_A7 Pin=U0-53
+Added Pin To Net: NetName=FSMC_A8 Pin=U0-54
+Added Pin To Net: NetName=FSMC_A9 Pin=U0-55
+Added Pin To Net: NetName=FSMC_A11 Pin=U0-57
+Added Pin To Net: NetName=FSMC_D4 Pin=U0-58
+Added Pin To Net: NetName=FSMC_D5 Pin=U0-59
+Added Pin To Net: NetName=FSMC_D6 Pin=U0-60
+Added Pin To Net: NetName=FSMC_D7 Pin=U0-63
+Added Pin To Net: NetName=FSMC_D8 Pin=U0-64
+Added Pin To Net: NetName=FSMC_D9 Pin=U0-65
+Added Pin To Net: NetName=FSMC_D10 Pin=U0-66
+Added Pin To Net: NetName=FSMC_D11 Pin=U0-67
+Added Pin To Net: NetName=FSMC_D12 Pin=U0-68
+Added Pin To Net: NetName=FSMC_D13 Pin=U0-77
+Added Pin To Net: NetName=FSMC_D14 Pin=U0-78
+Added Pin To Net: NetName=FSMC_D15 Pin=U0-79
+Added Pin To Net: NetName=FSMC_A17 Pin=U0-81
+Added Pin To Net: NetName=FSMC_D0 Pin=U0-85
+Added Pin To Net: NetName=FSMC_D1 Pin=U0-86
+Added Pin To Net: NetName=FSMC_A12 Pin=U0-87
+Added Pin To Net: NetName=FSMC_A13 Pin=U0-88
+Added Pin To Net: NetName=FSMC_A14 Pin=U0-89
+Added Pin To Net: NetName=FSMC_D3 Pin=U0-114
+Added Pin To Net: NetName=FSMC_D2 Pin=U0-115
+Added Pin To Net: NetName=FSMC_NOE Pin=U0-118
+Added Pin To Net: NetName=FSMC_NWE Pin=U0-119
+Added Pin To Net: NetName=FSMC_NE3 Pin=U0-125
+Added Pin To Net: NetName=FSMC_NBL0 Pin=U0-141
+Added Pin To Net: NetName=FSMC_NBL1 Pin=U0-142
+Added Pin To Net: NetName=FSMC_A1 Pin=U0-11
+Added Net: Name=FSMC_A1
+Added Pin To Net: NetName=FSMC_A2 Pin=U0-12
+Added Net: Name=FSMC_A2
+Added Pin To Net: NetName=FSMC_A3 Pin=U0-13
+Added Net: Name=FSMC_A3
+Added Pin To Net: NetName=FSMC_A4 Pin=U0-14
+Added Net: Name=FSMC_A4
+Added Pin To Net: NetName=FSMC_A5 Pin=U0-15
+Added Net: Name=FSMC_A5
+Added Pin To Net: NetName=FSMC_A6 Pin=U0-50
+Added Net: Name=FSMC_A6
+Added Pin To Net: NetName=FSMC_A10 Pin=U0-56
+Added Net: Name=FSMC_A10
+Added Pin To Net: NetName=FSMC_A15 Pin=U0-90
+Added Net: Name=FSMC_A15
+Added Pin To Net: NetName=FSMC_A16 Pin=U0-80
+Added Net: Name=FSMC_A16
+Added Pin To Net: NetName=FSMC_A18 Pin=U0-82
+Added Net: Name=FSMC_A18
+Added Member To Class: ClassName=2-MIN-SYSTEM Member=Component U1 IS62WV51216
+Added Room: Name=1-stm32
+Added Room: Name=2-MIN-SYSTEM
