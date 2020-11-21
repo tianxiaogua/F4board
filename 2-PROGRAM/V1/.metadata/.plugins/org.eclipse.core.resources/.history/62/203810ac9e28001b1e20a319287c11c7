@@ -1,0 +1,25 @@
+/*
+ * croflash.h
+ *
+ *  Created on: Nov 17, 2020
+ *      Author: DELL100030173
+ */
+
+#ifndef CROFLASH_H_
+#define CROFLASH_H_
+
+#include "main.h"
+
+extern	uint32_t WriteFlashData;
+extern	uint32_t addr;
+
+
+/*FLASH写入程序*/
+void writeFlashTest(void);
+
+
+/*FLASH读取打印程序*/
+void printFlashTest(void)
+
+
+#endif /* CROFLASH_H_ */

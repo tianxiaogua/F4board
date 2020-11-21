@@ -55,6 +55,23 @@ GenerateClassCluster=0
 DocumentUniqueId=CNYRFQCH
 
 [Document2]
+DocumentPath=2-MIN-SYSTEM.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TXCMMTOH
+
+[Document3]
 DocumentPath=PCB.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -71,7 +88,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YIDOJDPM
 
-[Document3]
+[Document4]
 DocumentPath=..\..\..\..\Work\PCB_package_library\常用封装\tianxiaohua_PcbLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -88,7 +105,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SRPKSGHC
 
-[Document4]
+[Document5]
 DocumentPath=..\..\..\..\Work\PCB_package_library\常用封装\tianxiaohua_Schlib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -105,7 +122,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JQBSWHYV
 
-[Document5]
+[Document6]
 DocumentPath=..\..\..\..\Work\PCB_package_library\STM-32封装资源\STMicroelectronics STM32 F1\STMicroelectronics STM32 F1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -122,7 +139,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XRUYFNRX
 
-[Document6]
+[Document7]
 DocumentPath=..\..\..\..\Work\PCB_package_library\STM-32封装资源\STMicroelectronics STM32 F1\STMicroelectronics STM32 F1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -138,23 +155,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VMFLBMKN
-
-[Document7]
-DocumentPath=2-MIN-SYSTEM.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=TXCMMTOH
 
 [Configuration1]
 Name=Sources

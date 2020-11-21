@@ -1,0 +1,20 @@
+15:51:27 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+
+15:51:29 Build Finished. 0 errors, 0 warnings. (took 1s.746ms)
+

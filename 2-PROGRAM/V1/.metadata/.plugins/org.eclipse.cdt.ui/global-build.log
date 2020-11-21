@@ -1,0 +1,1800 @@
+16:44:24 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15340	    120	   1840	  17300	   4394	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:44:32 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15340	    120	   1840	  17300	   4394	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:49:13 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:295:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   {
+   ^
+../Core/Src/main.c:296:24: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number 1 %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 (0x08000000 + j) );
+                     ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     %02lX
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14952	    120	   1840	  16912	   4210	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:49:15 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:49:16 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+16:50:26 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:295:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   {
+   ^
+../Core/Src/main.c:296:24: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number 1 %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 (0x08000000 + j) );
+                     ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     %02lX
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14952	    120	   1840	  16912	   4210	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:50:28 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:50:29 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+16:51:17 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:294:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:295:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   {
+   ^
+../Core/Src/main.c:296:24: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number 1 %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 (0x08000000 + j) );
+                     ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     %02lX
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14952	    120	   1840	  16912	   4210	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:51:19 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:51:20 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+16:53:41 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000003));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000004));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:309:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:310:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:311:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + j));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15276	    120	   1840	  17236	   4354	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:53:43 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:53:45 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+16:55:52 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000003));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000004));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:309:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:310:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:311:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15272	    120	   1840	  17232	   4350	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:55:54 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:55:55 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+16:59:18 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+10));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000004));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:309:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:310:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:311:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15276	    120	   1840	  17236	   4354	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+16:59:19 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+16:59:20 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:00:40 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000004));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:309:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:310:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:311:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15276	    120	   1840	  17236	   4354	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:00:42 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:00:43 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:02:05 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000004));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:311:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:312:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:313:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15284	    120	   1840	  17244	   435c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:02:07 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:02:08 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:02:13 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:311:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:312:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:313:26: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                       ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                       %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15288	    120	   1840	  17248	   4360	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:02:16 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:02:17 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:04:29 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:317:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:318:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:319:29: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i));
+                          ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15344	    120	   1840	  17304	   4398	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:04:31 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:04:32 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:06:32 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:293:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:317:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:318:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:319:29: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 0x4 * i));
+                          ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          %02lX
+../Core/Src/main.c:265:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15344	    120	   1840	  17304	   4398	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:06:34 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:06:35 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:08:25 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:307:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:319:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:320:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:321:29: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 0x4 * i));
+                          ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15344	    120	   1840	  17304	   4398	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:08:27 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:08:28 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:09:36 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:307:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:319:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   for (i = 0; i<16; i++);
+   ^~~
+../Core/Src/main.c:320:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+     {
+     ^
+../Core/Src/main.c:321:29: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+      printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 0x4));
+                          ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15336	    120	   1840	  17296	   4390	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:09:37 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:09:38 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:10:18 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:295:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 1 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:297:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 2 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+4));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:299:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 3 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+8));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:301:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 4 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000000+12));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:303:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 5 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000010));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:305:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 6 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000005));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:307:23: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf("number 7 %02X \r\n\r\n",STMFLASH_ReadHalfWord_2(0x08000006));
+                    ~~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    %02lX
+../Core/Src/main.c:321:27: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i ) );
+                        ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15344	    120	   1840	  17304	   4398	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:10:20 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:10:21 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:29:49 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:297:27: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number %d : %02X \r\n\r\n",i,STMFLASH_ReadHalfWord_2(0x08000000 + 4 * i ) );
+                        ~~~^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14956	    120	   1840	  16916	   4214	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:29:51 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:29:52 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:35:59 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:299:27: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("number %d : %02X \r\n\r\n", i, STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                        ~~~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15900	    120	   1872	  17892	   45e4	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:36:01 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:36:02 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:37:01 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:299:28: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "number %d : %02X \r\n\r\n", i, STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                         ~~~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         %02lX
+../Core/Src/main.c:310:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15976	    120	   1872	  17968	   4630	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:37:03 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:37:04 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+17:37:35 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:299:28: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "number %d : %02X \r\n\r\n", i, STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                         ~~~^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         %02lX
+../Core/Src/main.c:304:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:312:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15992	    120	   1872	  17984	   4640	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+17:37:37 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+17:37:38 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+18:04:55 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:299:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:301:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000004 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:303:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000008 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:305:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x0800000c + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:312:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:320:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16060	    120	   1872	  18052	   4684	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+18:04:57 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+18:04:58 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+18:06:50 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:299:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:301:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000004 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:303:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000008 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:305:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x0800000c + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:314:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:322:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:267:16: warning: unused variable 'j' [-Wunused-variable]
+   unsigned int j = 0;
+                ^
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16068	    120	   1872	  18060	   468c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+18:06:52 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+18:06:53 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:03:49 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I"D:/Work/1_PeoPle_counting/2-PROGRAM/TEST-1-OTA/USER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'STMFLASH_ReadHalfWord':
+../Core/Src/main.c:230:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  return *(uint16_t*)faddr;
+          ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:303:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000000 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:305:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000004 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:307:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x08000008 + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:309:20: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf( "    %02X ", STMFLASH_ReadHalfWord_2 ( 0x0800000c + 4 * i ) );
+                 ~~~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 %02lX
+../Core/Src/main.c:318:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+../Core/Src/main.c:326:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   printf( " %02X \r\n\r\n", STMFLASH_ReadHalfWord_2 ( 0x08004000 ) );
+             ~~~^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             %02lX
+arm-none-eabi-gcc -o "OTA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-1-OTA\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OTA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? OTA.elf
+ 
+arm-none-eabi-objdump -h -S  OTA.elf  > "OTA.list"
+arm-none-eabi-objcopy  -O binary  OTA.elf  "OTA.bin"
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? OTA.bin
+ 
+гд???????????гд????? OTA.list
+ 
+15:03:51 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:03:52 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:03:54 **** ╣╣╜и of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f401retx.o" "../Core/Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-size   peoplenumber.elf 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5740	     20	   1572	   7332	   1ca4	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:10:58 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5640	     20	   1572	   7232	   1c40	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:11:13 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:11:14 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:11:15 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:11:17 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5640	     20	   1572	   7232	   1c40	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+15:12:17 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:12:18 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:12:19 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:12:21 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5736	     20	   1572	   7328	   1ca0	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+гд???????????гд????? peoplenumber.list
+ 
+ 
+15:13:34 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:13:35 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:13:36 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:13:38 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5752	     20	   1572	   7344	   1cb0	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:17:22 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:17:23 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:17:24 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:17:26 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:19:14 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:21:17 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5848	     20	   1572	   7440	   1d10	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:22:06 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:22:07 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:22:08 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:22:10 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:22:15 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+15:36:11 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5848	     20	   1572	   7440	   1d10	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 
+15:51:23 **** Incremental Build of configuration Debug for project OTA ****
+make -j8 all 
+arm-none-eabi-size   OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16084	    120	   1872	  18076	   469c	OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:51:24 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+15:51:25 **** Incremental Build of configuration Debug for project V1 ****
+make -j8 all 
+arm-none-eabi-size   V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4632	     20	   1572	   6224	   1850	V1.elf
+гд???????????гд????? default.size.stdout
+ 
+15:51:27 **** Incremental Build of configuration Debug for project peoplenumber ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F401xE -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "peoplenumber.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Work\1_PeoPle_counting\2-PROGRAM\TEST-3\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peoplenumber.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+гд???????????гд??????????? peoplenumber.elf
+ 
+arm-none-eabi-objdump -h -S  peoplenumber.elf  > "peoplenumber.list"
+arm-none-eabi-objcopy  -O binary  peoplenumber.elf  "peoplenumber.bin"
+arm-none-eabi-size   peoplenumber.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5888	     20	   1572	   7480	   1d38	peoplenumber.elf
+гд???????????гд????? default.size.stdout
+ 
+гд???????????гд????? peoplenumber.bin
+ 
+гд???????????гд????? peoplenumber.list
+ 

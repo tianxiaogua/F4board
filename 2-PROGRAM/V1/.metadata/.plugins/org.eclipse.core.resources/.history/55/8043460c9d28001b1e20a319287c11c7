@@ -1,0 +1,50 @@
+/*
+ * croflash.c
+ *
+ *  Created on: Nov 17, 2020
+ *      Author: DELL100030173
+ */
+
+
+#include "croflash.h"
+
+
+
+uint32_t WriteFlashData = 0x12345678;
+uint32_t addr = 0x0807E000;
+
+/*FLASH写入程序*/
+void writeFlashTest(void)
+{
+	/* 1/4解锁FLASH*/
+	HAL_FLASH_Unlock();
+
+	/* 2/4擦除FLASH*/
+	/*初始化FLASH_EraseInitTypeDef*/
+	/*擦除方式页擦除FLASH_TYPEERASE_PAGES，块擦除FLASH_TYPEERASE_MASSERASE*/
+	/*擦除页数*/
+	/*擦除地址*/
+	FLASH_EraseInitTypeDef FlashSet;
+	FlashSet.TypeErase = FLASH_TYPEERASE_PAGES;
+	FlashSet.PageAddress = addr;
+	FlashSet.NbPages = 1;
+
+	/*设置PageError，调用擦除函数*/
+	uint32_t PageError = 0;
+	HAL_FLASHEx_Erase(&FlashSet, &PageError);
+
+	/* 3/4对FLASH烧写*/
+	HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, addr, WriteFlashData);
+
+	/* 4/4锁住FLASH*/
+	HAL_FLASH_Lock();
+}
+
+/*FLASH读取打印程序*/
+void printFlashTest(void)
+{
+	uint32_t temp = *(__IO uint32_t*)(addr);
+
+	printf("addr is:0x%x, data is:0x%x\r\n", addr, temp);
+}
+/* USER CODE END 0 */

@@ -1,0 +1,10 @@
+15:51:24 **** Incremental Build of configuration Debug for project TEST-2-OTA ****
+make -j8 all 
+arm-none-eabi-size   TEST-2-OTA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7836	     20	   1636	   9492	   2514	TEST-2-OTA.elf
+гд???????????гд????? default.size.stdout
+ 
+
+15:51:25 Build Finished. 0 errors, 0 warnings. (took 851ms)
+

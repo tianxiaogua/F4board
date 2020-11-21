@@ -1,0 +1,18 @@
+/*
+ * croflash.c
+ *
+ *  Created on: Nov 17, 2020
+ *      Author: DELL100030173
+ */
+
+
+#include "croflash.h"
+#include "stm32f4xx_hal_flash_ex.h"
+
+
+uint32_t WriteFlashData = 0x12345678;
+uint32_t addr = 0x0807E000;
+
+
+
+/* USER CODE END 0 */
